@@ -1,0 +1,250 @@
+Write a program to create singly Link List and perform following operations:
+1. Insert a node at desired Location.
+2. Delete a node from given Location.
+3. Update desired Location.
+4. Search
+5. Display
+
+import java.utiI.Scanner; class LinkList
+
+Node head= null; static class Node
+
+int data;
+Node next;
+Node(int d)
+
+data=d;
+next= null;
+
+
+
+public static void main(String args[])
+
+Scanner sc=new Scanner(System.in); LinkList Is= new LinkList();
+int ch,x,Ioc;
+
+
+do
+
+
+System.out.println();
+System.out.printIn("Press 1 For Insert between Node"); System.out.printIn("Press 2 For Delete 
+between Node"); System.out.printIn("Press 3 For Update between Node");
+
+Shree Uttar Gujarat BCA College                      pg. 31
+
+Java Programming Language
+JOURNAL
+
+
+System.out.printIn("Press 4 For Search Node"); System.out.printIn("Press 5 For Display Node"); 
+System.out.printIn("Press 0 For Exi!"); System.out.println();
+
+System.out.print("Enter Choice : "); ch=sc.nextlnt();
+switch(ch)
+
+
+case 1:
+
+
+
+
+
+
+
+
+
+
+case 2:
+
+
+
+
+
+
+
+case 3:
+
+
+
+
+
+
+
+
+
+
+case 4:
+
+System.out.print("Enter Position : "); loc=sc.nextlnt(); System.out.print("Enter Value : "); 
+x=sc.nextlnt();
+Is= insert_between(Is,x,loc); display(Is);
+break;
+
+
+System.out.print("Enter Location for Delete Node : "); loc=sc.nextlnt();
+Is=deIete_Between(Is,loc); display(Is);
+break;
+
+
+System.out.print("Enter Location for Update Node : "); loc=sc.nextlnt();
+System.out.print("Enter Value : "); x=sc.nextlnt();
+Is= update_Between(Is,Ioc,x); display(Is);
+break;
+
+System.out.print("Enter Value to be Searched : "); x=sc.nextlnt();
+search_node(Is,x); display(Is);
+break;
+
+case 5:
+
+
+
+case 0: default:
+
+
+display(Is); break;
+
+break;
+
+
+System.out.printIn("Wrong choise!");
+
+}whiIe(ch!=0);
+
+
+
+public static LinkList insert_between(LinkList Is,int x,int loc)
+
+
+Node node=new Node(x); if(Ioc==1)
+
+node.next=Is.head; Is.head= node; return Is;
+
+else
+
+
+Node temp=Is.head; int i=1; while(temp!= null)
+
+if(i= =Ioc-1)
+
+
+node.next=temp.next; temp.next= node; return Is;
+
+
+
+temp=temp.next;
+
+
+System.out.printIn("Location not found!"); return Is;
+
+public static LinkList deIete_Between(LinkList Is,int loc) Node curr=Is.head;
+Node temp=nuII; if(Is.head==nuII)
+
+System.out.printIn("LinkList is Empty!"); return Is;
+
+else
+
+if(Ioc==1)
+
+Is.head=curr.next; curr.next= null;
+System.out.printIn("Node Delete Successfully!");
+return Is;
+
+
+else
+
+int i=1; while(curr.next!=nuII)
+
+if(i==Ioc-1)
+
+temp=curr.next; curr.next=temp.next; temp= null;
+System.out.printIn("Node Delete Successfully!");
+return Is;
+
+else
+
+curr=curr.next;
+
+
+
+
+System.out.printIn("Position Not Found!"); return Is;
+
+
+
+
+
+public static LinkList update_Between(LinkList Is,int Ioc,int x)
+
+
+if(Is.head= =null)
+
+
+System.out.printIn("LinkList is Empty!"); return Is;
+
+else
+
+Node curr= Is.head; if(Ioc==1)
+
+curr.data=x;
+System.out.printIn("Node Update Successfully!");
+return Is;
+
+else
+
+int i=1; while(curr!=nuII)
+
+if(Ioc==i)
+
+curr.data=x; System.out.printIn("Node Update Successfully!");
+return Is;
+
+else
+
+curr=curr.next;
+
+
+
+
+System.out.printIn("Position Not Found!");
+
+
+
+return Is;
+
+
+
+public static void search_node(LinkList Is,int x)
+
+
+Node curr= Is.head; int i=1;
+while(curr!= null)
+
+
+if(curr.data= =x)
+
+System.out.printIn("Key Found At Location : "+ i); return;
+
+else
+
+curr=curr.next;
+
+
+
+
+System.out.printIn("Value not Found!");
+
+
+
+public static void display(LinkList Is)
+
+
+Node temp=Is.head; System.out.println();
+
+System.out.println(" :: LinkList :: "); while(temp!= null)
+
+System.out.print(" "+temp.data); temp=temp.next;
+
+System.out.println(" ");
+

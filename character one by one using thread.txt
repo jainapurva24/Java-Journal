@@ -1,0 +1,55 @@
+Write a program which accepts a String. Display one by one character from starting character 
+till the ending character at the interval of one second using thread.
+
+import java.utiI.*;
+class StringThread extends Thread
+
+String str;
+StringThread(String st)
+
+
+
+
+public void run()
+
+
+try{
+for(int i=0;i< str.length();i++)
+
+
+System.out.printIn(str.charAt(i)); Thread.sleep(1000);
+
+
+
+catch(Exception e)
+
+
+
+
+
+
+
+
+
+class lmplStringThread
+
+
+public static void main(String args[])
+
+
+Scanner sc= new Scanner(System.in);
+
+
+String st;
+System.out.printIn("Enter String: ");
+
+Shree Uttar Gujarat BCA College                      pg. 21
+
+Java Programming Language
+JOURNAL
+
+
+st=sc.nextLine();
+
+StringThread th=new StringThread(st); th.start();
+

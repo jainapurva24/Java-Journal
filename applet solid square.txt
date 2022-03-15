@@ -1,0 +1,28 @@
+Write an applet program to Display a Solid square having Red color Display name of your college 
+within the square with font style= "Times New Roman", font size= 12 and Font color= "yellow".
+
+import java.applet.*; import java.awt.*;
+public class Ract extends Applet
+
+
+Font bigFont; public void init()
+
+bigFont= new Font("Times New Roman",Font.BOLD,12);
+
+
+public void paint(Graphics g)
+
+
+
+g.setCoIor(Color.red); g.fiIIRect(50,50,350,150);
+g.setFont(bigFont); g.setCoIor(Color.yellow);
+g.drawString("SHREE UTTAR GUJARAT BCA & BBA COLLAGE",100,125);
+
+
+
+
+y’
+<APPLET code=Ract.class height= 500 width= 500>
+</APPLET>
+“y
+

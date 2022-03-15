@@ -1,0 +1,198 @@
+Write a menu driven program that accept a String and perform various operations without using 
+String functions. Uppercase, Lowercase, Toggle case, count number of vowels, Title case.
+
+import java.utiI.*; import java.Iang.*;
+
+class opr
+
+
+String str;
+
+
+opr()
+
+
+Scanner s=new Scanner(System.in); System.out.printIn("Enter String : "); str=s.nextLine();
+
+
+
+void uppercase()
+
+
+char strArr[] = str.toCharArray(); for (int i = 0; i < strArr.length; i+ +)
+
+if (strArr[i] > = 'a' && strArr[i] <= 'z') strArr[i] = (char) ((int) strArr[i] - 32);
+
+System.out.print("Upper case string is : "); for (int i = 0; i < strArr.length; i+ +)
+
+System.out.print(strArr[i]);
+
+void lowercase()
+
+
+char strArr[] = str.toCharArray(); for (int i = 0; i < strArr.length; i+ +)
+
+if (strArr[i] >= 'A' && strArr[i] < = 'Z') strArr[i] = (char) ((int) strArr[i] + 32);
+
+System.out.print("Upper case string is : "); for (int i = 0; i < strArr.length; i+ +)
+
+System.out.print(strArr[i]);
+
+
+
+void togglecase()
+
+
+char strArr[] = str.toCharArray(); for (int i = 0; i < strArr.length; i+ +)
+
+if (strArr[i] >= 'A' && strArr[i] < = 'Z' )
+
+
+strArr[i] = (char) ((int) strArr[i] + 32);
+
+
+else if (strArr[i] > = 'a' && strArr[i] < = 'z')
+
+
+strArr[i] = (char) ((int) strArr[i] - 32);
+
+
+
+System.out.print("Upper case string is : "); for (int i = 0; i < strArr.length; i+ +)
+
+System.out.print(strArr[i]);
+
+
+void vowelscount()
+
+int c=0;
+char strArr[] = str.toCharArray(); for (int i = 0; i < strArr.length; i+ +)
+
+if(strArr[i]=='A' strArr[i]=='E' strArr[i]=='I' strArr[i]=='0' strArr[i]=='U' II strArr[i]=='u')
+
+
+
+
+System.out.printIn("Total Vowels is : "+c);
+
+
+
+void titlecase()
+
+
+StringBuilder titleCase = new StringBuilder(str.length());
+boolean nextTitleCase = true;
+
+
+for (char c : str.toCharArray())
+
+
+if (Character.isSpaceChar(c)) nextTitleCase = true;
+else if (nextTitleCase)
+
+c = Character.toTitIeCase(c); nextTitleCase = false;
+
+titleCase.append(c);
+
+str=titIeCase.tostring(); System.out.printIn(str);
+
+class Stringopr
+
+static int ch;
+public static void main(String []args)
+
+
+Scanner s= new Scanner(System.in);
+opr o=new opr(); do
+
+
+
+System.out.printIn("Press 1 for Upper case String. !");
+System.out.printIn("Press 2 for Lower case String. !");
+System.out.printIn("Press 3 for Toggle case String. !");
+System.out.printIn("Press 4 for Count number of Vowels from String. !");
+System.out.printIn("Press 5 for Title case String. !");
+System.out.printIn("Press 0 for Exit. !");
+
+System.out.println(""); System.out.print("Enter Your choice :"); ch=s.nextlnt();
+
+switch (ch)
+
+
+case 1:
+
+
+
+
+case 2:
+
+
+
+
+case 3:
+
+
+
+
+
+
+Shree Uttar Gujarat BCA College
+
+System.out.println(""); o.uppercase();
+break;
+
+System.out.println(""); o.lowercase();
+break;
+
+System.out.println(""); o.toggIecase();
+break;
+
+
+case 4:
+
+
+
+
+case 5:
+
+
+
+
+case 0: break;
+
+
+System.out.println(""); o.voweIscount(); break;
+
+System.out.println(""); o.titIecase();
+break;
+
+)whiIe(ch!=0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

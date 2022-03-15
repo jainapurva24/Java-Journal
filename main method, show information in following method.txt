@@ -1,0 +1,61 @@
+Create a Class Student which contains instance variables roll no, name, class. Store Student 
+class in package p1.Extend class result from student which contains instance variables marks in 
+JAVA, VB.NET and IOT. Store result class in package P2 which resides in package P1.Write a java 
+code to run a main method and display the student information in following format.
+Shree Uttar Gujarat BCA College
+Roll No:          Name:       
+Class :         Marks in :
+
+JAVA  :      
+
+Package 1 :
+.NET  :        
+IOT   :    
+
+
+package P1; public class stud
+
+public int rollno; public String name; public String stream;
+
+
+Package 2 :
+
+package P1.P2;
+public class result extends P1.stud
+
+public int java; public int vb; public int iot;
+
+
+
+Shree Uttar Gujarat BCA College                      pg.29
+
+Java Programming Language
+JOURNAL
+
+
+import P1.stud; import P1.P2.result;
+import java.utiI.Scanner; class PackageMS
+
+public static void main(String args[])
+
+stud s=new stud(); result r=new result();
+Scanner sc = new Scanner(System.in);
+
+System.out.println(); System.out.print("Enter the Roll No. : "); s.roIIno=sc.nextlnt(); 
+System.out.print("Enter the Name : "); s.name= sc.nextLine();
+sc.nextLine(); System.out.print("Enter the Class : "); s.stream=sc.nextLine();
+
+System.out.print("Enter the JAVA Marks : "); r.java=sc.nextlnt();
+System.out.print("Enter the VB.NET Marks : "); r.vb=sc.nextlnt();
+System.out.print("Enter the IOT Marks : "); r.iot=sc.nextlnt();
+
+System.out.printIn("Shree Uttar Gujarat BCA College"); System.out.printIn("Roll No. : " + s.rollno 
++ " Name : " + s.name); System.out.printIn("Class : " + s.stream);
+System.out.println(" :: Marks In :: ");
+System.out.printIn("JAVA : " + r.java + " VB.NET : " + r.vb + " IOT : " + r.iot); 
+System.out.printIn("Total Marks : " +(r.java + r.vb + r.iot));
+
+
+
+
+

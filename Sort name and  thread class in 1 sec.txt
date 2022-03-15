@@ -1,0 +1,63 @@
+Write a java application which accepts 10 names of student and their age. Sort names and age in 
+descending order. Display the names of students using thread class at interval of one second.
+
+import java.utiI.*; class StudentData
+
+int age;
+String name;
+StudentData(String nm,int a)
+
+name= nm; age=a;
+
+
+class StudThread extends Thread
+
+
+StudentData st[]=new StudentData[10]; StudThread(StudentData std[])
+
+st=std;
+
+public void run()
+
+for(int i=0;i<10;i+ +)
+
+for(int j=i+1;j <10;j+ +)
+
+if(st[i].age>stg].age)
+
+StudentData temp=st[i]; st[i]=stg];
+stg]=temp;
+
+try
+
+for(int i=0;i<10;i+ +)
+
+
+System.out.printIn("Name : "+st[i].name); System.out.printIn("Age : " +st[i].age); 
+Thread.sleep(1000);
+
+
+catch(Exception ex)
+
+
+
+
+
+
+
+
+
+class lmplStudThread
+public static void main(String args[]) Scanner sc=new Scanner(System.in);
+StudentData st[]=new StudentData[10]; String nm;
+int x;
+for(int i=0;i<10;i+ +)
+
+
+System.out.printIn("Enter Student name for student : "+i); nm=sc.nextLine();
+System.out.printIn("Enter Student age: "); x=sc.nextlnt();
+sc.nextLine();
+st[i]= new StudentData(nm,x);
+
+StudThread th=new StudThread(st); th.start();
+

@@ -1,0 +1,31 @@
+Write an applet program that gets no of rectangles from the user (param tag) and draw the 
+rectangles in different positions.
+
+import java.applet.*; import java.awt.*;
+public class AppLoop extends Applet
+
+int no;
+public void init()
+
+
+String str=getParameter("x");
+no=Integer.parselnt(str);
+
+public void paint(Graphics g) for(int i=1;i<= no;i+ +)
+if(i%2= =0)
+
+g.setCoIor(Color.red); g.fiIIRect((i*50+20),(i*50+20),50,50);
+
+
+
+else
+
+g.setCoIor(Color.blue); g.fiIIRect((i*50+20),(i*50+20),50,50);
+
+
+
+
+
+y’< APPLET code=AppLoop.class width=700 height=700>
+<PARAM name="x" vaIue=4>
+</APPLET>*/

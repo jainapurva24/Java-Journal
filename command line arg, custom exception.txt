@@ -1,0 +1,53 @@
+Write a program to accept five command line arguments and then raise custom exception if any 
+argument is not from the following List: (“BCA“,”MCA”,“BBA“,“MBA“,“Other“)Set Exception message 
+(“Argument not in the List”)
+
+import java.Iang.Exception;
+class MyException extends Exception
+
+
+MyException(String message)
+
+
+super(message);
+
+
+
+
+
+class sample
+
+public static void main(String args[])
+
+String s[]=new String[5]; int f=1;
+for(int i=0;i< 5;i+ +)
+
+s[i]=args[i];
+
+
+try
+
+for(int i=0;i< 5;i+ +)
+
+
+f=1;
+if(s[i].equals("BCA")= =true II s[i].equals("MCA")= =true II s[i].equals("BBA")= =true II 
+s[i].equals("MBA")= =true II s[i].equals("OTHER")= =true)
+
+f=0;
+
+if(f==1)
+
+throw new MyException("Argument not in list");
+
+
+
+
+
+catch(MyException e)
+
+System.out.printIn(e.getMessage());
+
+
+
+

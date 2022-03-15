@@ -1,0 +1,217 @@
+Write a program to create singly circular Link List and perform following operations:
+1. Insert a node at beginning.
+2. Insert a node at End.
+3. Delete First node.
+4. Delete Last node.
+5. Display.
+
+import java.utiI.*; class CircularList
+
+static class Node
+
+int data;
+Node next;
+Node(int x)
+
+
+data=x; next= null;
+
+
+Node head= null;
+Node tail=nuII;
+public static void main(String args[])
+
+int ch,x;
+CircularList sl= new CircularList(); Scanner sc=new Scanner(System.in); do
+
+System.out.println();
+System.out.println("***** Circular LinkList *****"); System.out.printIn("Press 1 For Insert First 
+Node"); System.out.printIn("Press 2 For Insert Last Node");
+Shree Uttar Gujarat BCA College                      pg. 38
+
+Java Programming Language
+JOURNAL
+
+
+System.out.printIn("Press 3 For Delete First Node"); System.out.printIn("Press 4 For Delete Last 
+Node"); System.out.printIn("Press 5 For Display Node"); System.out.printIn("Press 0 For Exi!"); 
+System.out.println("************ END *’*’**’*’*’*"); System.out.println();
+
+System.out.print("Enter Choice : "); ch=sc.nextlnt(); System.out.println();
+
+switch(ch)
+
+
+case 1:
+
+
+
+
+
+
+
+case 2:
+
+
+
+
+
+
+
+case 3:
+
+
+
+
+case 4:
+
+
+
+
+case 5:
+
+
+
+case 0:
+
+Shree Uttar Gujarat BCA College
+
+
+System.out.print("Enter Value : "); x=sc.nextlnt();
+sl= insert_first(sI,x);
+display(sI);
+break;
+
+
+System.out.print("Enter Value : "); x=sc.nextlnt();
+sl= insert_Iast(sI,x); display(sI);
+break;
+
+
+sl= delete first(sI); display(sI);
+break;
+
+
+sI=deIete_Iast(sl);
+display(sI);
+break;
+
+display(sI); break;
+
+default:
+
+break;
+
+
+System.out.printIn("Wrong Choice!"); break;
+
+}whiIe(ch!=0);
+
+
+public static CircularList insert first(CircuIarList sI,int x)
+
+
+Node newNode= new Node(x); if(sI.head= =null)
+
+sI.head= newNode; sI.tail= newNode; newNode.next=sI.head;
+System.out.printIn("First Node Inserted successfully!"); return sl;
+
+else
+
+
+newNode.next=sI.head; sI.head= newNode;
+System.out.printIn("First Node Inserted successfully!"); return sl;
+
+public static CircularList insert_Iast(CircuIarList sI,int x) Node newNode= new Node(x);
+if(sI.head= =null)
+
+
+sI.head= newNode; sI.tail= newNode; newNode.next=sI.head;
+System.out.printIn("Last Node Inserted successfully!"); return sl;
+
+
+
+
+
+else
+
+sI.tail.next=newNode; sI.tail= newNode; newNode.next=sI.head;
+System.out.printIn("Last Node Inserted successfully!");
+
+return sl;
+
+public static CircularList delete first(CircuIarList sl)
+
+
+if(sI.head= =null)
+
+System.out.printIn("List is Underflow!"); return sl;
+
+else
+
+if(sI.head==sI.tail)
+
+sI.head= null; sI.tail= null;
+System.out.printIn("First Node Deleted successfully!");
+
+
+else{
+
+
+
+
+
+
+
+
+return sl;
+
+Node temp=sI.head; sI.head=temp.next;
+System.out.printIn("First Node Deleted successfully!"); temp=nuII;
+
+
+public static CircularList deIete_Iast(CircuIarList sl) if (sI.head== null)
+
+
+
+System.out.printIn("List is Empty!"); return sl;
+
+else
+
+
+if (sI.head!=sI.tail)
+
+
+Node curr=sI.head; while (curr.next!=sI.tail)
+
+curr=curr.next;
+
+
+sI.tail=curr; sI.tail.next=sI.head;
+System.out.printIn("Last Node Deleted successfully!");
+
+
+else
+
+sI.head=sI.tail; sI.head= null;
+System.out.printIn("Last Node Deleted successfully!");
+
+
+
+return sl;
+
+public static void display(CircuIarList sl) if(sI.head==nuII)
+System.out.printIn("List is Empty"); return;
+
+else
+
+Node curr=sI.head; System.out.println(""); System.out.println(":: Circular LinkList ::");
+                
+
+
+while(curr!=sI.tail)
+
+
+System.out.print(" "+curr.data); curr=curr.next;
+
+System.out.print(" "+curr.data); System.out.println("");

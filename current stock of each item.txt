@@ -1,0 +1,48 @@
+Create package stores. Under it create a class called stock with member variable (item no, item 
+name, stock availible, and cost). Under the default package create a class called sales with field 
+name (qty_soId) and it is the child class of stores class. Write a program to print the current 
+stock of each item and perform addition.
+
+import store.Stock; import java.utiI.Scanner; class Sales
+
+public static void main(String args[])
+
+Stock st=new Stock();
+Scanner sc=new Scanner(System.in); int sold[]= new int[5];
+int curstock[]= new int[5]; int totIestock=0;
+
+for(int i=0;i< 5;i+ +)
+
+System.out.println(""); System.out.print("Enter the Item No. : "); st.item no[i]=sc.nextlnt();
+sc.nextLine();
+
+
+System.out.print("Enter the Item Name : "); st.item_name[i]=sc.nextLine();
+
+System.out.print("Enter the Available Stock : "); st.stock[i]=sc.nextlnt();
+
+System.out.print("Enter the Cost : "); st.cost[i]=sc.nextlnt();
+
+Shree Uttar Gujarat BCA College                      pg. 15
+
+Java Programming Language
+JOURNAL
+
+
+System.out.print("Enter the Quantity Sold : "); sold[i]=sc.nextlnt();
+
+
+
+for(int i=0;i < 5;i+ +)
+
+
+System.out.println(""); System.out.println("Item No. : "+st.item no[i]);
+System.out.println("Item Name : "+st.item name[i]); System.out.println("Item Stock : 
+"+st.stock[i]); System.out.println("Item Cost : "+st.cost[i]); System.out.println("Item Sold : 
+"+soId[i]);
+
+curstock[i]=st.stock[i]-sold[i]; System.out.println("currant Stock is :"+curstock[i]);
+
+totlestock=totIestock+curstock[i]; System.out.printIn("Total Stock Is : "+totIestock);
+
+

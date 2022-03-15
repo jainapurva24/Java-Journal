@@ -1,0 +1,29 @@
+
+
+1. Write a program to check whether a number is Palindrome or not.
+
+import java.utiI.Scanner; class Palindrom
+
+public static void main(String args[])
+
+
+System.out.print("Enter String : "); Scanner sc = new Scanner(System.in);
+
+String str = sc.nextLine();
+StringBuffer result = new StringBuffer(); char ch[] = str.toCharArray();
+
+for(int i=(str.length()-1);i>=0;i--)
+
+
+result.append(str.charAt(i));
+
+
+
+String str2 = result.to String(); if(str.equals(str2))
+
+System.out.printIn("String Is Palindrom");
+
+
+else
+
+System.out.printIn("String 1s Not Palindrom");
